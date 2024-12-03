@@ -1,13 +1,23 @@
-body {
+/*CSS Reset*/
+*
+{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body
+{
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.cardHighlight
+{
+  min-height: 100%;
+}
+.main-banner
+{
+  background: rgba(59, 55, 0, 0.8) no-repeat center center;
+  background-size: cover;
+  height: 400px;
+  background-blend-mode: multiply;
 }
