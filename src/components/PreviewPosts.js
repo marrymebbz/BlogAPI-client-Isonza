@@ -11,9 +11,11 @@ export default function PreviewPosts({ breakPoint, data }) {
       <Card className="cardHighlight mx-2 mb-2">
         <Card.Body>
           <Card.Title className="text-center">
-            <Link to={`https://blogapi-isonza.onrender.com/posts/getBlog/${_id}`} className="text-decoration-none text-black">
+          <Card.Title className="text-center">
+            <Link to={`/posts/getBlog/${_id}`} className="text-decoration-none text-black">
               {title}
             </Link>
+          </Card.Title>
           </Card.Title>
           <Card.Text>
             <p className="text-center pb-0 mb-1">{content}</p>
@@ -24,9 +26,7 @@ export default function PreviewPosts({ breakPoint, data }) {
           </Card.Text>
         </Card.Body>
         <Card.Footer className="p-0 m-0 bg-warning">
-          <Link className="btn btn-warning d-block border-0 fw-semibold" to={`https://blogapi-isonza.onrender.com/posts/getBlog/${_id}`}>
-            Quick View
-          </Link>
+        <Link className="btn btn-warning d-block border-0 fw-semibold" to={`/posts/getBlog/${_id}`}>Quick View</Link>
         </Card.Footer>
       </Card>
     </Col>
