@@ -108,6 +108,7 @@ export default function Posts() {
   const [showAddPostModal, setShowAddPostModal] = useState(false);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [showAddCommentModal, setShowAddCommentModal] = useState(false);
 
   // Fetch user data
   const fetchUserData = useCallback(async () => {
@@ -185,6 +186,10 @@ export default function Posts() {
     setPosts((prevPosts) => [newPost, ...prevPosts]);
   };
 
+  // const addNewComment = (newComment) => {
+  //   setComments((prevComments) => [newComments, ...prevComments]);
+  // };
+
   return (
     <Container className="mb-5">
       {error && <div className="alert alert-danger">{error}</div>}
@@ -202,10 +207,21 @@ export default function Posts() {
             Add Post
           </Button>
         </>
-      ) : (
-        <PostList posts={posts} />
-      )}
+      ) : user? (
+        <>
+          <PostList posts={posts} />
+          <Button
+            variant="danger"
+            onClick={() => setShowAddPostModal(true)}
+            className="mb-3 d-flex px-4 py-2 fw-bold mx-auto"
+          >
+            Add Post
+          </Button>
+        </>
+      ) : <PostList posts={posts} />
+    }
 
+      {/* Modal for AddPost component */}
       <Modal show={showAddPostModal} onHide={() => setShowAddPostModal(false)} centered>
         <Modal.Header closeButton>
           <Modal.Title>Add New Post</Modal.Title>
@@ -214,6 +230,17 @@ export default function Posts() {
           <AddPost closeModal={() => setShowAddPostModal(false)} addPost={addNewPost} />
         </Modal.Body>
       </Modal>
+
+      {/* Modal for AddComment component */}
+      {/* <Modal show={showAddCommentModal} onHide={() => setShowAddCommentModal(false)} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Add New Comment</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <AddPost closeModal={() => setShowAddCommentModal(false)} addComment={addNewComment} />
+        </Modal.Body>
+      </Modal> */}
+      
     </Container>
   );
 }

@@ -3,7 +3,7 @@ SAMPLE DATA:
 1. Sample User
     - Email: graceadmin@gmail.com
     - Password: 12345678
-    - Access Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGRhN2IzZWRmNmI1YjAwOTJlZGE2NyIsImVtYWlsIjoiZ3JhY2VhZG1pbkBnbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzMzMTQyNzA2fQ.Q-8amkput9XQBJjIR4R9-vbXiTWWb7HTPP7PKk1YUN8
+    - Access Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NGRhN2IzZWRmNmI1YjAwOTJlZGE2NyIsImVtYWlsIjoiZ3JhY2VhZG1pbkBnbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNzMzMzA3MzUyfQ.fNwj-ducDn14d5Ly-WUk__IK0RcocF3ZojEGgSTTdnc
     - Data:
     {
         "email": "graceadmin@gmail.com",

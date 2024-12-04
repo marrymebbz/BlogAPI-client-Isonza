@@ -13,8 +13,11 @@ export default function PostCard({ postProp }) {
         <Card.Text className="mb-0"><strong>Content:</strong> {content}</Card.Text>
         <Card.Text className="mb-0"><strong>Author:</strong> {author}</Card.Text>
         <Card.Text className="mb-0"><strong>Creation Date:</strong> {creationdate}</Card.Text>
-        <Link className="btn btn-primary" to={`/posts/getBlog/${_id}`}>
+        <Link className="btn btn-warning w-100 my-2" to={`/posts/getBlog/${_id}`}>
           Details
+        </Link>
+        <Link className="btn btn-success w-100" to={`/posts/addComment/${_id}`}>
+          Add Comment
         </Link>
       </Card.Body>
     </Card>
